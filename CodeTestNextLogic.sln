@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeTestNextLogic", "CodeTestNextLogic\CodeTestNextLogic.csproj", "{FDF2B303-4894-404E-B927-F3FA0D33CF36}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarPricer", "CarPricer\CarPricer.csproj", "{F052DADC-D294-456D-9CEC-303F23150956}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarPricerTests", "CarPricerTests\CarPricerTests.csproj", "{02C7AE7A-5453-4426-8CF6-505E3B02FD8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FDF2B303-4894-404E-B927-F3FA0D33CF36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FDF2B303-4894-404E-B927-F3FA0D33CF36}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FDF2B303-4894-404E-B927-F3FA0D33CF36}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FDF2B303-4894-404E-B927-F3FA0D33CF36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F052DADC-D294-456D-9CEC-303F23150956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F052DADC-D294-456D-9CEC-303F23150956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F052DADC-D294-456D-9CEC-303F23150956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F052DADC-D294-456D-9CEC-303F23150956}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02C7AE7A-5453-4426-8CF6-505E3B02FD8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02C7AE7A-5453-4426-8CF6-505E3B02FD8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02C7AE7A-5453-4426-8CF6-505E3B02FD8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02C7AE7A-5453-4426-8CF6-505E3B02FD8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
