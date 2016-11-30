@@ -13,16 +13,16 @@ namespace CarPricer
             var reducedValueOfCarByMonths = getReducedValueOfCarByNumberOfMonths(car);
 
             var newValueOftheCar = car.PurchaseValue - reducedValueOfCarByMonths;
-            var reducedValueOfCarByMiles = getReducedValueOfCarByMilesDriven(car, newValueOftheCar);
+            var reducedValueOfCarByMiles = getReducedValueOfCarByMilesDriven(car.NumberOfMiles, newValueOftheCar);
 
             newValueOftheCar = newValueOftheCar - reducedValueOfCarByMiles;
 
-            var newValueOfCarByCollissions = getReducedValueOfCarByNumbersOfcollisions(car, newValueOftheCar);
+            var newValueOfCarByCollissions = getReducedValueOfCarByNumbersOfcollisions(car.NumberOfCollisions, newValueOftheCar);
 
 
             newValueOftheCar = newValueOftheCar - newValueOfCarByCollissions;
 
-            var reducedValueOfCarByPreviousOwner = getReducedValueOfCarByPreviousOwner(car, newValueOftheCar);
+            var reducedValueOfCarByPreviousOwner = getReducedValueOfCarByPreviousOwner(car.NumberOfPreviousOwners, newValueOftheCar);
 
             newValueOftheCar = newValueOftheCar - reducedValueOfCarByPreviousOwner;
             if (car.NumberOfPreviousOwners == 0)
@@ -34,9 +34,8 @@ namespace CarPricer
         }
 
 
-        private decimal getReducedValueOfCarByMilesDriven(Car car, decimal currentCarValue)
+        private decimal getReducedValueOfCarByMilesDriven(int totalMilesOfCar, decimal currentCarValue)
         {
-            var totalMilesOfCar = car.NumberOfMiles;
 
             var numberOfMilesPerThousands = totalMilesOfCar / 1000;
 
@@ -54,9 +53,9 @@ namespace CarPricer
         }
 
 
-        private decimal getReducedValueOfCarByPreviousOwner(Car car, decimal currentCarValue)
+        private decimal getReducedValueOfCarByPreviousOwner(int numberOfPreviousOwners, decimal currentCarValue)
         {
-            var numbersOfPreviousOwners = car.NumberOfPreviousOwners;
+            var numbersOfPreviousOwners = numberOfPreviousOwners;
             decimal reducedValueOfTheCar = 0;
             const int maximumPreviousOwner = 2;
             if (numbersOfPreviousOwners > maximumPreviousOwner)
@@ -71,11 +70,11 @@ namespace CarPricer
         }
 
 
-        private decimal getReducedValueOfCarByNumbersOfcollisions(Car car, decimal currentCarValue)
+        private decimal getReducedValueOfCarByNumbersOfcollisions(int numberOfCollisions, decimal currentCarValue)
         {
 
             decimal reducedValueOfTheCar = 0;
-            int collisionMult = ((car.NumberOfCollisions < 5) ? car.NumberOfCollisions : 5);
+            int collisionMult = ((numberOfCollisions < 5) ? numberOfCollisions : 5);
             reducedValueOfTheCar += currentCarValue * (collisionMult * 0.02m);
             return reducedValueOfTheCar;
         }
